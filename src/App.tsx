@@ -1,7 +1,7 @@
-import ListGroup from "./components/ListGroup";
+import ChampCard from "./components/ChampCard/ChampCard";
 
 function App() {
-  return <div><ListGroup/></div>;
+  return <><ChampCard/></>;
 }
 
 export default App;
