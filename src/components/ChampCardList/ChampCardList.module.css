@@ -1,0 +1,10 @@
+.champList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.champList div {
+    margin-top: 20px;
+    /* white-space: nowrap; */
+}

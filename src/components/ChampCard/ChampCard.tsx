@@ -4,9 +4,9 @@ import css from "./ChampCard.module.css";
 //http://ddragon.leagueoflegends.com/cdn/13.15.1/data/en_US/champion.json
 //http://ddragon.leagueoflegends.com/cdn/13.15.1/data/en_US/champion/Aatrox.json
 
-function ChampCard() {
+function ChampCard(param: { champ: string; }) {
 
-    let champName = "Rammus";
+    let champName = param.champ;
 
     const [championData, setChampionData] = useState<any>(null);
   
@@ -28,7 +28,7 @@ function ChampCard() {
         {championData ? (
           <>
             <img
-              src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.name}_0.jpg`}
+              src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champName}_0.jpg`}
               alt={`${champName} splashart`}
             />
             <h1>{championData.name}</h1>
