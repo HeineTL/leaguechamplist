@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import ChampCard from "../ChampCard/ChampCard";
 import css from "./ChampCardList.module.css";
+import ChampModal from "../ChampModal/ChampModal";
 
 function ChampCardList() {
   const [champions, setChampions] = useState<string[]>([]);
+  const [selectedChampionData, setSelectedChampionData] = useState<any>(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
     const getChampions = async () => {
@@ -22,11 +25,30 @@ function ChampCardList() {
     getChampions();
   }, []);
 
+  const openModal = (championData: any) => {
+    setSelectedChampionData(championData);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedChampionData(null);
+    setModalIsOpen(false);
+  };
+
   return (
     <div className={css.champList}>
-        {champions.map(championName => (
-          <ChampCard champ={championName}/>
-        ))}
+      {champions.map(championName => (
+        <ChampCard
+          key={championName}
+          champ={championName}
+          openModal={openModal}
+        />
+      ))}
+      <ChampModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        championData={selectedChampionData}
+      />
     </div>
   );
 }
