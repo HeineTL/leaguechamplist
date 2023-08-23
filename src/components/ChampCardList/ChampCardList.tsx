@@ -18,7 +18,7 @@ function ChampCardList() {
         const namesArray = Object.keys(championData);
         setChampions(namesArray);
       } catch (error) {
-        console.error('Error fetching champions:', error);
+        console.error('Error getting champions: ', error);
       }
     };
 

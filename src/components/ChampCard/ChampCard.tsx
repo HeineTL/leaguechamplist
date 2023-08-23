@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import css from "./ChampCard.module.css";
-import ChampModal from "../ChampModal/ChampModal";
 
 //http://ddragon.leagueoflegends.com/cdn/13.15.1/data/en_US/champion.json
 //http://ddragon.leagueoflegends.com/cdn/13.15.1/data/en_US/champion/Aatrox.json

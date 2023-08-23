@@ -4,6 +4,9 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.champList div:hover {
+    padding: 5px;
+}
 .champList div {
     margin-top: 20px;
     /* white-space: nowrap; */
