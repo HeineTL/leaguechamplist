@@ -4,3 +4,11 @@ h1 {
     font-size: 5em;
     font-weight: 700;
 }
+.input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+input {
+    text-align: center;
+}

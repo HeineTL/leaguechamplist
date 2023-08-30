@@ -3,7 +3,7 @@ import ChampCard from "../ChampCard/ChampCard";
 import css from "./ChampCardList.module.css";
 import ChampModal from "../ChampModal/ChampModal";
 
-function ChampCardList() {
+function ChampCardList({champNameSearch}: {champNameSearch: string}) {
   const [champions, setChampions] = useState<string[]>([]);
   const [selectedChampionData, setSelectedChampionData] = useState<any>(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -37,7 +37,9 @@ function ChampCardList() {
 
   return (
     <div className={css.champList}>
-      {champions.map(championName => (
+      {champions
+      .filter(championName => championName.toLowerCase().includes(champNameSearch.toLowerCase()) )
+      .map(championName => (
         <ChampCard
           key={championName}
           champ={championName}
