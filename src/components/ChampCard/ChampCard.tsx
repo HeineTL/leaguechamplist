@@ -27,7 +27,7 @@ function ChampCard({champ, openModal}: {champ: string; openModal: (championData:
       {championData ? (
         <>
           <img
-            src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champName}_0.jpg`}
+            src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champName}_0.jpg`}
             alt={`${champName} splashart`}
           />
           <h1>{championData.name}</h1>

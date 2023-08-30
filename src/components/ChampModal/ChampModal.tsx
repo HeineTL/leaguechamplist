@@ -25,7 +25,7 @@ function ChampModal({
           <div
             className={css.modalbg}
             style={{
-              backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.id}_0.jpg')`, // Replace with your image URL
+              backgroundImage: `url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.id}_0.jpg')`, // Replace with your image URL
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -44,7 +44,7 @@ function ChampModal({
             <tr>
               <td>
                 <img
-                  src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/passive/${championData.passive.image.full}`}
+                  src={`https://ddragon.leagueoflegends.com/cdn/13.16.1/img/passive/${championData.passive.image.full}`}
                 />
               </td>
               <td>Passive</td>
@@ -56,7 +56,7 @@ function ChampModal({
               <tr key={index}>
                 <td>
                   <img
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/spell/${championData.spells[index].image.full}`}
+                    src={`https://ddragon.leagueoflegends.com/cdn/13.16.1/img/spell/${championData.spells[index].image.full}`}
                   />
                 </td>
                 <td>{abilitiesArray[index]}</td>
@@ -112,7 +112,7 @@ function ChampModal({
               <div
                 className={css.skinsdiv}
                 style={{
-                  backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.id}_${skin.num}.jpg')`, // Replace with your image URL
+                  backgroundImage: `url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.id}_${skin.num}.jpg')`, // Replace with your image URL
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -120,29 +120,6 @@ function ChampModal({
               <h3>{skin.name}</h3>
             </div>
           ))}
-
-          {/* <div className={css.skins}>
-            <div
-              className={css.skinsdiv}
-              style={{
-                backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.id}_0.jpg')`, // Replace with your image URL
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            ></div>
-            <h3>Brown Goat</h3>
-          </div>
-          <div className={css.skins}>
-            <div
-              className={css.skinsdiv}
-              style={{
-                backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.id}_0.jpg')`, // Replace with your image URL
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            ></div>
-            <h3>Brown Goat</h3>
-          </div> */}
 
           <button className={css.button} onClick={onRequestClose}>
             Close

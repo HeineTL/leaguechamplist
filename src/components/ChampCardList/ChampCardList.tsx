@@ -11,7 +11,7 @@ function ChampCardList() {
   useEffect(() => {
     const getChampions = async () => {
       try {
-        const response = await fetch('http://ddragon.leagueoflegends.com/cdn/13.15.1/data/en_US/champion.json');
+        const response = await fetch('https://ddragon.leagueoflegends.com/cdn/13.15.1/data/en_US/champion.json');
         const data = await response.json();
         const championData = data.data;
 
